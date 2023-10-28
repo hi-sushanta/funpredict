@@ -10,7 +10,7 @@ with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
 
 VERSION = '0.0.1'
 DESCRIPTION = 'It\'s simply finding the best model for your specific data'
-LONG_DESCRIPTION = 'It\'s all about finding the perfect match between your data and the model. It's like finding the perfect outfit for a big night out - you want to pick the one that highlights your unique style and personality'
+LONG_DESCRIPTION = 'It\'s all about finding the perfect match between your data and the model. It\'s like finding the perfect outfit for a big night out - you want to pick the one that highlights your unique style and personality'
 
 # Setting up
 setup(
@@ -24,12 +24,4 @@ setup(
     packages=find_packages(),
     install_requires=['numpy','matplotlib','click','scikit-learn','pandas','tqdm','joblib','lightgbm','xgboost','catboost'],
     keywords=['python', 'scikit-learn', 'machine learning', 'deep learning', 'Computer Vision', 'Artificial intelligence'],
-    classifiers=[
-        "Development Status:: 1 - Planning",
-        "Intended Audience:: Developers",
-        "Programming Language :: Python :: 3",
-        "Operating System:: Unix",
-        "Operating System :: MacOS :: MacOS X",
-        "Operating System :: Microsoft :: Windows",
-    ]
 )
