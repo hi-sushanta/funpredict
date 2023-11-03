@@ -10,6 +10,7 @@ from sklearn.compose import ColumnTransformer
 
 from funpredict.utils import Utils
 
+
 from sklearn.metrics import (
     accuracy_score,
     balanced_accuracy_score,

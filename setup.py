@@ -8,9 +8,8 @@ here = os.path.abspath(os.path.dirname(__file__))
 with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
     long_description = "\n" + fh.read()
 
-VERSION = '0.0.1'
-DESCRIPTION = 'It\'s simply finding the best model for your specific data'
-LONG_DESCRIPTION = 'It\'s all about finding the perfect match between your data and the model. It\'s like finding the perfect outfit for a big night out - you want to pick the one that highlights your unique style and personality'
+VERSION = '0.0.3'
+DESCRIPTION = '''Introducing Fun Predict, the ultimate time-saver for machine learning! No more complex coding or tedious parameter tuning - just sit back and let Fun Predict build your basic models with ease. It's like having a personal assistant for your machine learning projects, making the process simple, efficient, and, well, Fun! 🛋'''
 
 # Setting up
 setup(
