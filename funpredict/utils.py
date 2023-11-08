@@ -10,12 +10,38 @@ from sklearn.base import ClassifierMixin
 from sklearn.base import RegressorMixin
 from sklearn.impute import SimpleImputer, MissingIndicator
 from sklearn.preprocessing import StandardScaler, OneHotEncoder, OrdinalEncoder
-
+import matplotlib.pyplot as plt
+import pandas as pd
 
 
 class Utils:
 
     def __init__(self):
+       self.sclf = {"RidgeClassifierCV" :"RCCV","LogisticRegression":"LGR" ,"CalibratedClassifierCV":"CCV",             
+        "SGDClassifier":"SGDC","ExtraTreesClassifier":"EXTC","GaussianNB":"GSB","RidgeClassifier":"RC",
+        "PassiveAggressiveClassifier":"PAC","LinearSVC":"LSVC","RandomForestClassifier":"RFC",
+        "SVC":"SVC","NuSVC":"NuSVC","NearestCentroid":"NC","LinearDiscriminantAnalysis":"LDA",
+        "BernoulliNB":"BlB","CatBoostClassifier":"CBC","Perceptron":"PC","KNeighborsClassifier":"KNC",
+        "LabelSpreading":"LS","LGBMClassifier" :"LGBMC","LabelPropagation":"LP","BaggingClassifier":"BC",                  
+        "QuadraticDiscriminantAnalysis" : "QDA", "DecisionTreeClassifier" : "DTC", "XGBClassifier" : "XGBC",                     
+        "AdaBoostClassifier": "ABC" ,"ExtraTreeClassifier" :"EXTC" ,"DummyClassifier": "DC"
+        }
+       
+       self.rmd = {"ElasticNetCV":"ENCV","BayesianRidge":"ByesR","RidgeCV":"RCV","LinearRegression":"LR",
+        "TransformedTargetRegressor":"TTR","Lars":"Lrs","Ridge":"Rige","Lasso":"Laso","LassoLars":"LL",
+        "LassoCV":"LsCV","LassoLarsCV":"LLCV","PoissonRegressor":"PR","SGDRegressor":"SGDR",
+        "OrthogonalMatchingPursuitCV":"OMCV","HuberRegressor":"HR","LassoLarsIC":"LLIC","ElasticNet":"ENet",
+        "LarsCV":"LCV","AdaBoostRegressor":"ABR","TweedieRegressor":"TR","ExtraTreesRegressor":"ExTR",
+        "PassiveAggressiveRegressor":"PAR","GammaRegressor":"GR","LGBMRegressor":"LGBMR",
+        "CatBoostRegressor":"CBR","RandomForestRegressor":"RFR","HistGradientBoostingRegressor":"HGBR",
+        "GradientBoostingRegressor":"GBR","BaggingRegressor":"BR","KNeighborsRegressor":"KNR",
+        "XGBRegressor":"XGBR","OrthogonalMatchingPursuit":"OMP","RANSACRegressor":"RASCR",
+        "NuSVR":"NSVR","LinearSVR":"LSVR","SVR":"SVR","DummyRegressor":"DR","DecisionTreeRegressor":"DTR",
+        "ExtraTreeRegressor":"ETR","GaussianProcessRegressor":"GPR","MLPRegressor":"MLPR","KernelRidge":"KrR"
+       }     
+       
+
+
        self.r_clf = [
             "ClassifierChain",
             "ComplementNB",
@@ -109,6 +135,129 @@ class Utils:
     
     def adjusted_rsquared(self,r2, n, p):
         return 1 - (1 - r2) * ((n - 1) / (n - p - 1))
+    
+    def cbarplot(self,pred,score_label,backcolor,font_size,title_color,score_label_color,time_color):
+        # Create a DataFrame from the data
+        df = pd.DataFrame({'Model': self.sclf.values(),
+                           score_label:pred[score_label],
+                           'Time taken (seconds)': pred['Time Taken']})
+
+        # Sort the DataFrame by accuracy
+        df = df.sort_values(by=[score_label], ascending=False)
+
+        # Create a bar chart of the accuracy vs time taken
+        plt.figure(figsize=(100,100))
+        plt.rcParams['axes.facecolor'] = backcolor
+
+        plt.xticks(fontsize=6)
+        plt.yticks(fontsize=6)
+
+        plt.bar(df['Model'], df[score_label], color=score_label_color)
+        plt.bar(df['Model'], df['Time taken (seconds)'], color=time_color)
+
+        # Add a legend
+        plt.legend([score_label, 'Time taken (seconds)'])
+        ax = plt.axes()
+        ax.set_facecolor(backcolor)
+        # Set the chart title and labels
+        plt.title(f'{score_label} vs time taken for machine learning models',color=title_color,fontsize=font_size)
+        plt.xlabel('Model')
+        plt.ylabel(f'{score_label} and time taken')
+
+        # Display the chart
+        plt.show()
+
+    def rbarplot(self,pred,score_label,backcolor,font_size,title_color,score_label_color,time_color):
+        # Create a DataFrame from the data
+        df = pd.DataFrame({'Model': self.rmd.values(),
+                           score_label:pred[score_label],
+                           'Time taken (seconds)': pred['Time Taken']})
+
+        # Sort the DataFrame by accuracy
+        df = df.sort_values(by=[score_label], ascending=False)
+
+        # Create a bar chart of the accuracy vs time taken
+        plt.figure(figsize=(100,100))
+        plt.rcParams['axes.facecolor'] = backcolor
+
+        plt.xticks(fontsize=6)
+        plt.yticks(fontsize=6)
+
+        plt.bar(df['Model'], df[score_label], color=score_label_color)
+        plt.bar(df['Model'], df['Time taken (seconds)'], color=time_color)
+
+        # Add a legend
+        plt.legend([score_label, 'Time taken (seconds)'])
+        # Set the chart title and labels
+        plt.title(f'{score_label} vs time taken for machine learning models',color=title_color,fontsize=font_size)
+        plt.xlabel('Model')
+        plt.ylabel(f'{score_label} and time taken')
+
+        # Display the chart
+        plt.show()
+    
+    def chbarplot(self,pred,score_label,backcolor,font_size,title_color,score_label_color,
+                  time_color):
+        # Create a DataFrame from the data
+        df = pd.DataFrame({'Model': self.sclf.values(),
+                           score_label:pred[score_label],
+                           'Time taken (seconds)': pred['Time Taken']})
+
+        # Sort the DataFrame by accuracy
+        df = df.sort_values(by=[score_label], ascending=False)
+
+        # Create a bar chart of the accuracy vs time taken
+        plt.figure(figsize=(100,100))
+        plt.rcParams['axes.facecolor'] = backcolor
+
+        plt.xticks(fontsize=6)
+        plt.yticks(fontsize=6)
+
+        plt.barh(df['Model'], df[score_label], color=score_label_color)
+        plt.barh(df['Model'], df['Time taken (seconds)'], color=time_color)
+
+        # Add a legend
+        plt.legend([score_label, 'Time taken (seconds)'])
+        
+        # Set the chart title and labels
+        plt.title(f'{score_label} vs time taken for machine learning models',color=title_color,fontsize=font_size)
+        plt.xlabel('Model')
+        plt.ylabel(f'{score_label} and time taken')
+
+        # Display the chart
+        plt.show()
+    
+    def rhbarplot(self,pred,score_label,backcolor,font_size,title_color,score_label_color,
+                  time_color):
+        
+        # Create a DataFrame from the data
+        df = pd.DataFrame({'Model': self.rmd.values(),
+                           score_label:pred[score_label],
+                           'Time taken (seconds)': pred['Time Taken']})
+
+        # Sort the DataFrame by accuracy
+        df = df.sort_values(by=[score_label], ascending=False)
+
+        # Create a bar chart of the accuracy vs time taken
+        plt.figure(figsize=(100,100))
+        plt.rcParams['axes.facecolor'] = backcolor
+        plt.xticks(fontsize=6)
+        plt.yticks(fontsize=6)
+
+        plt.barh(df['Model'], df[score_label], color=score_label_color)
+        plt.barh(df['Model'], df['Time taken (seconds)'], color=time_color)
+
+        # Add a legend
+        plt.legend([score_label, 'Time taken (seconds)'])
+
+        # Set the chart title and labels
+        plt.title(f'{score_label} vs time taken for machine learning models',color=title_color,fontsize=font_size)
+        plt.xlabel('Model')
+        plt.ylabel(f'{score_label} and time taken')
+
+        # Display the chart
+        plt.show()
+
 
 
 

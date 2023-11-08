@@ -9,8 +9,8 @@ from sklearn.preprocessing import StandardScaler, OneHotEncoder, OrdinalEncoder
 from sklearn.compose import ColumnTransformer
 
 from funpredict.utils import Utils
-
-
+import matplotlib.pyplot as plt
+import pandas as pd
 from sklearn.metrics import (
     accuracy_score,
     balanced_accuracy_score,
@@ -296,6 +296,13 @@ class PlayClassifier:
             self.fit(X_train, X_test, y_train, y_test)
 
         return self.models
+    
+    def barplot(self,pred,score_label='Accuracy',backcolor='violet',font_size=16,title_color="black",ac= "green",tc='yellow'):
+        ut.cbarplot(pred,score_label,backcolor,font_size,title_color,ac,tc)
+    def hbarplot(self,pred,score_label='Accuracy',backcolor='violet',font_size=16,title_color='black',ac='green',tc='yellow'):
+        ut.chbarplot(pred,score_label,backcolor,font_size,title_color,ac,tc)
+
+
 
 
 
@@ -540,4 +547,8 @@ class PlayRegressor:
             self.fit(X_train, X_test, y_train, y_test)
 
         return self.models
-
+    
+    def barplot(self,pred,score_label ="Adjusted R-Squared",backcolor='violet',font_size=16,title_color="black",ac= "green",tc='yellow'):
+        ut.rbarplot(pred,score_label,backcolor,font_size,title_color,ac,tc)
+    def hbarplot(self,pred,score_label="Adjusted R-Squared",backcolor='violet',font_size=16,title_color='black',ac='green',tc='yellow'):
+        ut.rhbarplot(pred,score_label,backcolor,font_size,title_color,ac,tc)
