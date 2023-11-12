@@ -28,7 +28,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y,test_size=.5,random_sta
 
 clf = PlayClassifier(verbose=0,ignore_warnings=True, custom_metric=None)
 models,predictions = clf.fit(X_train, X_test, y_train, y_test,'multiclass')
-# If you conform which model working best than choosen hare.
+# If you confirm which model working best then choose hare.
 model_dictionary = clf.provide_models(X_train,X_test,y_train,y_test) 
 print(models)
 
@@ -79,10 +79,10 @@ data = load_diabetes()
 X,y = data.data, data.target
 X_train, X_test, y_train, y_test = train_test_split(X, y,test_size=.5,random_state =42)
 
-clf = PlayRegressor(verbose=0,ignore_warnings=True, custom_metric=None)
-models,predictions = clf.fit(X_train, X_test, y_train, y_test)
+rgs = PlayRegressor(verbose=0,ignore_warnings=True, custom_metric=None)
+models,predictions = rgs.fit(X_train, X_test, y_train, y_test)
 # If you confirm which model works best then choose hare.
-model_dictionary = clf.provide_models(X_train, X_test,y_train,y_test)
+model_dictionary = rgs.provide_models(X_train, X_test,y_train,y_test)
 print(models)
 
 |-----------------------------------------------------------------------------------------|
