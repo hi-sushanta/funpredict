@@ -28,7 +28,8 @@ X_train, X_test, y_train, y_test = train_test_split(X, y,test_size=.5,random_sta
 
 clf = PlayClassifier(verbose=0,ignore_warnings=True, custom_metric=None)
 models,predictions = clf.fit(X_train, X_test, y_train, y_test,'multiclass')
-model_dictionary = clf.provide_models(X_train,X_test,y_train,y_test) # If you conform which model working best than choosen hare.
+# If you conform which model working best than choosen hare.
+model_dictionary = clf.provide_models(X_train,X_test,y_train,y_test) 
 print(models)
 
                                         | Accuracy | Balanced Accuracy| F1 Score | Time Taken |
@@ -80,7 +81,8 @@ X_train, X_test, y_train, y_test = train_test_split(X, y,test_size=.5,random_sta
 
 clf = PlayRegressor(verbose=0,ignore_warnings=True, custom_metric=None)
 models,predictions = clf.fit(X_train, X_test, y_train, y_test)
-model_dictionary = clf.provide_models(X_train, X_test,y_train,y_test) # If you confirm which model works best then choose hare.
+# If you confirm which model works best then choose hare.
+model_dictionary = clf.provide_models(X_train, X_test,y_train,y_test)
 print(models)
 
 |-----------------------------------------------------------------------------------------|
@@ -130,3 +132,4 @@ print(models)
     | KernelRidge                   |      3.91      -   |   3.69    | 63.34 |    0.06    |
     |-------------------------------------------------------------------------------------|
 ```
+

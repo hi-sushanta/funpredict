@@ -157,8 +157,6 @@ class Utils:
 
         # Add a legend
         plt.legend([score_label, 'Time taken (seconds)'])
-        ax = plt.axes()
-        ax.set_facecolor(backcolor)
         # Set the chart title and labels
         plt.title(f'{score_label} vs time taken for machine learning models',color=title_color,fontsize=font_size)
         plt.xlabel('Model')
