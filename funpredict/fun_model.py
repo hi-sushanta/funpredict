@@ -297,35 +297,35 @@ class PlayClassifier:
 
         return self.models
     
-    def barplot(self,pred:pd.DataFrame,score_label:str = 'Accuracy',backcolor:str = 'violet',font_size:int = 16,title_color:str = "black",
-                score_label_color:str = "green",time_color:str = 'yellow'):
+    def barplot(self,pred:pd.DataFrame,score_label:str = 'Accuracy',backcolor:str = '#F5F7F8',font_size:int = 16,title_color:str = "black",
+                score_label_color:str = "green",time_color:str = '#FA7070'):
         '''
         Generates a bar chart contrasting a specified score and execution times of various Classification machine learning models.
 
         Args:
             pred (`pd.DataFrame`): A dictionary containing the predictions and execution times for the models.
             score_label (`str`, *optional*, defaults to `Accuracy`): Which score you compare to time.
-            backcolor (`str`, *optional*, defaults to `violet`): The background color of the plot.
+            backcolor (`str`, *optional*, defaults to `#F5F7F8`): The background color of the plot.
             font_size (`int`, *optional*, defaults to `16`): The font size for the plot labels.
             title_color (`str`,*optional*, defaults to `black`): The color of the plot title.
             score_label_color (`str`, *optional*, defaults to `green`): The color of the bar.
-            time_color (`str`, *optional*, defaults to `yellow`): The color of the bar representing the time taken.
+            time_color (`str`, *optional*, defaults to `#FA7070`): The color of the bar representing the time taken.
         '''
         ut.cbarplot(pred,score_label,backcolor,font_size,title_color,score_label_color,time_color)
     
-    def hbarplot(self,pred:pd.DataFrame,score_label:str = 'Accuracy',backcolor:str = 'violet',font_size:int = 16,title_color:str = 'black',
-                 score_label_color:str = 'green',time_color:str = 'yellow'):
+    def hbarplot(self,pred:pd.DataFrame,score_label:str = 'Accuracy',backcolor:str = '#F5F7F8',font_size:int = 16,title_color:str = 'black',
+                 score_label_color:str = 'green',time_color:str = '#FA7070'):
         '''
         Generates a horizontal bar chart contrasting a specified score and execution times of various Classification machine learning models.
 
         Args:
             pred (`pd.DataFrame`): A dictionary containing the predictions and execution times for the models.
             score_label (`str`, *optional*, defaults to `Accuracy`): Which score you compare to time.
-            backcolor (`str`, *optional*, defaults to `violet`): The background color of the plot.
+            backcolor (`str`, *optional*, defaults to `#F5F7F8`): The background color of the plot.
             font_size (`int`, *optional*, defaults to `16`): The font size for the plot labels.
             title_color (`str`,*optional*, defaults to `black`): The color of the plot title.
             score_label_color (`str`, *optional*, defaults to `green`): The color of the bar.
-            time_color (`str`, *optional*, defaults to `yellow`): The color of the bar representing the time taken.
+            time_color (`str`, *optional*, defaults to `#FA7070`): The color of the bar representing the time taken.
         '''
         ut.chbarplot(pred,score_label,backcolor,font_size,title_color,score_label_color,time_color)
 
@@ -575,34 +575,34 @@ class PlayRegressor:
 
         return self.models
     
-    def barplot(self,pred:pd.DataFrame,score_label:str ="Adjusted R-Squared",backcolor:str ='violet',font_size:int = 16,title_color:str ="black",
-                score_label_color:str = "green",time_color:str = 'yellow'):
+    def barplot(self,pred:pd.DataFrame,score_label:str ="Adjusted R-Squared",backcolor:str ='#F5F7F8',font_size:int = 16,title_color:str ="black",
+                score_label_color:str = "green",time_color:str = '#FA7070'):
         '''
         Generates a bar chart contrasting a specified score and execution times of various regression machine learning models.
 
         Args:
             pred (`pd.DataFrame`): A dictionary containing the predictions and execution times for the models.
             score_label (`str`, *optional*, defaults to `Adjusted R-Squared`): Which score you compare to time.
-            backcolor (`str`, *optional*, defaults to `violet`): The background color of the plot.
+            backcolor (`str`, *optional*, defaults to `#F5F7F8`): The background color of the plot.
             font_size (`int`, *optional*, defaults to `16`): The font size for the plot labels.
             title_color (`str`,*optional*, defaults to `black`): The color of the plot title.
             score_label_color (`str`, *optional*, defaults to `green`): The color of the bar.
-            time_color (`str`, *optional*, defaults to `yellow`): The color of the bar representing the time taken.
+            time_color (`str`, *optional*, defaults to `#FA7070`): The color of the bar representing the time taken.
         '''
         ut.rbarplot(pred,score_label,backcolor,font_size,title_color,score_label_color,time_color)
 
-    def hbarplot(self,pred:pd.DataFrame,score_label:str = "Adjusted R-Squared",backcolor:str = 'violet',font_size:int = 16,title_color:str = 'black',
-                 score_label_color:str = 'green',time_color:str ='yellow'):
+    def hbarplot(self,pred:pd.DataFrame,score_label:str = "Adjusted R-Squared",backcolor:str = '#F5F7F8',font_size:int = 16,title_color:str = 'black',
+                 score_label_color:str = 'green',time_color:str ='#FA7070'):
         '''
         Generates a horizontal bar chart contrasting a specified score and execution times of various regression machine learning models.
         
         Args:
             pred (`pd.DataFrame`): A dictionary containing the predictions and execution times for the models.
             score_label (`str`, *optional*, defaults to `Adjusted R-Squared`): Which score you compare to time.
-            backcolor (`str`, *optional*, defaults to `violet`): The background color of the plot.
+            backcolor (`str`, *optional*, defaults to `#F5F7F8`): The background color of the plot.
             font_size (`int`, *optional*, defaults to `16`): The font size for the plot labels.
             title_color (`str`,*optional*, defaults to `black`): The color of the plot title.
             score_label_color (`str`, *optional*, defaults to `green`): The color of the bar.
-            time_color (`str`, *optional*, defaults to `yellow`): The color of the bar representing the time taken.
+            time_color (`str`, *optional*, defaults to `#FA7070`): The color of the bar representing the time taken.
         '''
         ut.rhbarplot(pred,score_label,backcolor,font_size,title_color,score_label_color,time_color)
