@@ -133,3 +133,26 @@ print(models)
     |-------------------------------------------------------------------------------------|
 ```
 
+```
+# Vertical bar plot
+clf.barplot(predictions)
+```
+![clf-bar](https://github.com/hi-sushanta/funpredict/assets/93595990/6a6ab9fc-ceb1-481e-a73c-1314c59c4562)
+
+```
+# Horizontal bar plot
+clf.hbarplot(predictions)
+```
+![clf-hbar](https://github.com/hi-sushanta/funpredict/assets/93595990/9b594717-411e-4295-90bd-37cd4ef9e68e)
+
+```
+# Vertical bar plot
+rgs.barplot(predictions)
+```
+![rgs-bar](https://github.com/hi-sushanta/funpredict/assets/93595990/d0a92bad-2a2c-4826-99a8-c0561dd71f40)
+
+```
+# Horizontal bar plot
+rgs.hbarplot(predictions)
+```
+![rgs-hbar](https://github.com/hi-sushanta/funpredict/assets/93595990/9be834be-64dd-4641-8f04-02d7c635cb13)
