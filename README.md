@@ -66,6 +66,17 @@ print(models)
     | DummyClassifier                   | 0.34     |  0.33            |   0.17    | 0.03      |
     -------------------------------------------------------------------------------------------
 ```
+```
+# Vertical bar plot
+clf.barplot(predictions)
+```
+![clf-bar](https://github.com/hi-sushanta/funpredict/assets/93595990/6a6ab9fc-ceb1-481e-a73c-1314c59c4562)
+
+```
+# Horizontal bar plot
+clf.hbarplot(predictions)
+```
+![clf-hbar](https://github.com/hi-sushanta/funpredict/assets/93595990/9b594717-411e-4295-90bd-37cd4ef9e68e)
 
 # Regression
 Example :
@@ -132,18 +143,6 @@ print(models)
     | KernelRidge                   |      3.91      -   |   3.69    | 63.34 |    0.06    |
     |-------------------------------------------------------------------------------------|
 ```
-
-```
-# Vertical bar plot
-clf.barplot(predictions)
-```
-![clf-bar](https://github.com/hi-sushanta/funpredict/assets/93595990/6a6ab9fc-ceb1-481e-a73c-1314c59c4562)
-
-```
-# Horizontal bar plot
-clf.hbarplot(predictions)
-```
-![clf-hbar](https://github.com/hi-sushanta/funpredict/assets/93595990/9b594717-411e-4295-90bd-37cd4ef9e68e)
 
 ```
 # Vertical bar plot
