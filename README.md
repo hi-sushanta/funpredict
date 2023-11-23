@@ -144,14 +144,5 @@ print(models)
     |-------------------------------------------------------------------------------------|
 ```
 
-```
-# Vertical bar plot
-rgs.barplot(predictions)
-```
-![rgs-bar](https://github.com/hi-sushanta/funpredict/assets/93595990/d0a92bad-2a2c-4826-99a8-c0561dd71f40)
+![rgs_all](https://github.com/hi-sushanta/funpredict/assets/93595990/f5dc96f5-ed8a-4fa4-a338-755f3b690d8f)
 
-```
-# Horizontal bar plot
-rgs.hbarplot(predictions)
-```
-![rgs-hbar](https://github.com/hi-sushanta/funpredict/assets/93595990/9be834be-64dd-4641-8f04-02d7c635cb13)
