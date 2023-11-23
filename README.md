@@ -66,17 +66,8 @@ print(models)
     | DummyClassifier                   | 0.34     |  0.33            |   0.17    | 0.03      |
     -------------------------------------------------------------------------------------------
 ```
-```
-# Vertical bar plot
-clf.barplot(predictions)
-```
-![clf-bar](https://github.com/hi-sushanta/funpredict/assets/93595990/6a6ab9fc-ceb1-481e-a73c-1314c59c4562)
+![clf_all](https://github.com/hi-sushanta/funpredict/assets/93595990/414dd709-46f0-4513-aa43-567d2e4add72)
 
-```
-# Horizontal bar plot
-clf.hbarplot(predictions)
-```
-![clf-hbar](https://github.com/hi-sushanta/funpredict/assets/93595990/9b594717-411e-4295-90bd-37cd4ef9e68e)
 
 # Regression
 Example :
