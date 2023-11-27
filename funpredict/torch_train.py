@@ -8,7 +8,6 @@ class BaseClass:
     def __init__(self):
         self.fig = None 
         self.ax = None 
-        pass 
         
     def loss_plot(self,epoch:int,loss:float,label_loss:str,last_epoch:int,sign:str):
          # Create a new figure if needed
