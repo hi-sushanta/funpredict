@@ -138,9 +138,9 @@ print(models)
 ![rgs_all](https://github.com/hi-sushanta/funpredict/assets/93595990/f5dc96f5-ed8a-4fa4-a338-755f3b690d8f)
 
 ## Don't stop there! The story doesn't end here. 
-It empowers you to train your very own custom neural network on your dataset, unlocking powerful machine-learning capabilities for both classification and regression tasks.
+It empowers you to train your custom neural network on your dataset, unlocking powerful machine-learning capabilities for classification and regression tasks.
 
-***Example Like classification:***
+***Example Like classification How You can use in your environment:***
 ```
 import torch 
 from torch import nn 
@@ -192,7 +192,7 @@ print(output)
 
 ```
 
-***Example Like Regressation:***
+***Similar to Regressation:***
 ```
 import torch 
 from torch import nn 
